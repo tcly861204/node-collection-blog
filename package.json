@@ -1,0 +1,23 @@
+{
+  "name": "collection-blog",
+  "version": "1.0.0",
+  "description": "采集博客",
+  "main": "main.js",
+  "scripts": {
+    "build": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcly861204/node-collection-blog.git"
+  },
+  "author": "tcly861204 <tcly861204@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcly861204/node-collection-blog/issues"
+  },
+  "homepage": "https://github.com/tcly861204/node-collection-blog#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "request": "^2.88.2"
+  }
+}
