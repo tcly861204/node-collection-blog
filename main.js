@@ -63,7 +63,22 @@ const createHtml = function (data) {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
     to: 'tcly861204@hotmail.com', // 收邮件的账号
     subject: '每日前端必看', // 标题
-    html: _html // 邮寄的内容
+    html: `
+    <style>
+      a {
+        text-decoration: none;
+        color: #424242;
+        font-size: 13px;
+      }
+      ul, li {
+        list-style-type: none;
+      }
+    </style>
+    <section>
+      <h2>每日必看</h2>
+      <ul>\n${data}\n</ul>
+    </section>
+    ` // 邮寄的内容
   }
   transporter.sendMail(mailOptions, (err, info) => {
     if (!err) {
