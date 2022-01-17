@@ -75,8 +75,8 @@ const createHtml = function (data) {
         font-size: 13px;
       }
     </style>
-    <section style="width: 800px; margin: 0 auto;">
-      <h2 style="font-size: 16px; font-weight: normal;">每日必看</h2>
+    <section style="width: 750px; margin: 0 auto; border: 2px solid #ccc; border-radius: 6px;">
+      <h2 style="font-size: 18px; text-align: center;">每日必看</h2>
       <ul style="list-style-type: none;">\n${data}\n</ul>
     </section>
     ` // 邮寄的内容
