@@ -65,6 +65,10 @@ const createHtml = function (data) {
     subject: '每日前端必看', // 标题
     html: `
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       a {
         text-decoration: none;
         color: #424242;
