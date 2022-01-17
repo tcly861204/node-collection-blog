@@ -2,6 +2,9 @@ name: collection-blog
 on:
   push:
     branches: [main]
+  schedule:
+    # 定时任务，在每天的5点推送信息到邮箱
+    - cron: '0 21 * * *'
 
 jobs:
   deploy:
@@ -19,10 +22,3 @@ jobs:
       
       - name: Build
         run: npm run build
-  
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3 # 使用部署到 GitHub pages 的 action
-        with:
-          publish_dir: ./dist # 部署打包后的 dist 目录
-          github_token: ${{ secrets.Reploy_ToKen }} # secret 名
-          commit_message: 'feat: 查看构建完整的blog' # 部署时的 git 提交信息，自由填写
