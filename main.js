@@ -35,7 +35,7 @@ const createHtml = function (data) {
 </html>
   `
   fs.writeFileSync(
-    path.resolve(__dirname, 'index.html'),
+    path.resolve(__dirname, 'dist/index.html'),
     _html,
     'utf8'
   )
