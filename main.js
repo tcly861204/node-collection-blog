@@ -26,7 +26,7 @@ request({
   group.each(function(i, item) {
     let title = $(this).find('.com-article-panel-title').html()
     title = title.replace(/(?<=(href="))/, 'https://cloud.tencent.com')
-    data.push(`<li>${title}</li>`)
+    data.push(`<li style="list-style-type: none;">${title}</li>`)
   })
   createHtml(data.join(''))
 })
@@ -64,18 +64,8 @@ const createHtml = function (data) {
     to: 'tcly861204@hotmail.com', // 收邮件的账号
     subject: '每日前端必看', // 标题
     html: `
-    <style>
-      a {
-        text-decoration: none;
-        color: #424242;
-        font-size: 13px;
-      }
-      ul, li {
-        list-style-type: none;
-      }
-    </style>
-    <section>
-      <h2>每日必看</h2>
+    <section style="width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 16px; font-weight: normal;">每日必看</h2>
       <ul>\n${data}\n</ul>
     </section>
     ` // 邮寄的内容
