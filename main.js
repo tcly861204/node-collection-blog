@@ -1,7 +1,7 @@
-const request = require('request')
-const cheerio = require('cheerio')
 const fs = require('fs')
 const path = require('path')
+const request = require('request')
+const cheerio = require('cheerio')
 const nodemailer = require('nodemailer')
 let transporter = nodemailer.createTransport({
   service: 'QQ', // 发给QQ邮箱
@@ -61,7 +61,7 @@ const createHtml = function (data) {
   `
   let mailOptions = {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
-    to: 'tcly861204@hotmail.com', // 收邮件的账号
+    to: 'tcly861204@aliyun.com', // 收邮件的账号
     subject: '每日前端必看', // 标题
     html: `
     <style>
