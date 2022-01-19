@@ -11,7 +11,7 @@ const cloudTencent = function () {
           decodeEntities: false
         })
         const group = $('body').find('.com-article-list').find('.com-article-panel')
-        const data: Array<any> = []
+        const data: Array<string> = []
         group.each(function(i, item) {
           let title = $(this).find('.com-article-panel-title').html()
           title = title!.replace(/(?<=(href="))/, 'https://cloud.tencent.com')
