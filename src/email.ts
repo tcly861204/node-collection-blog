@@ -1,18 +1,12 @@
 import nodemailer from 'nodemailer'
 import fs from 'fs'
 import path from 'path'
-try {
-  const pass = fs.readFileSync(path.resolve(__dirname, '../pass.text'))
-  console.log(pass.toString())
-} catch (error) {
-  console.log(error)
-}
-
+const pass = fs.readFileSync(path.resolve(__dirname, '../pass.text')).toString()
 let transporter = nodemailer.createTransport({
   service: 'QQ', // 发给QQ邮箱
   auth: { // 权限认证
     user: '356671808@qq.com',
-    pass: 'waiyzqzpizodcabh'
+    pass
   }
 })
 const sendMail = function(options: string) {
