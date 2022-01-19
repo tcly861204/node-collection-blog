@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 try {
   const pass = fs.readFileSync(path.resolve(__dirname, '../pass.text'))
-  console.log(pass)
+  console.log(pass.toString())
 } catch (error) {
   console.log(error)
 }
