@@ -12,7 +12,7 @@ const cnode = function () {
         })
         const group = $('body').find('#topic_list').find('.cell')
         const data: Array<string> = []
-        group.each(function(i, item) {
+        group.each(function(i) {
           if (i > 4 && i < 20) {
             let title = $(this).find('.topic_title_wrapper').html()
             title = title!.replace(/(\<span.*\<\/span\>)/g, '').trim()
@@ -20,7 +20,7 @@ const cnode = function () {
             data.push(`\t<li style="list-style-type: none;">${title}</li>`)
           }
         })
-        reslove([])
+        reslove(data)
       }
     }
     return request.get(uri, callback)
