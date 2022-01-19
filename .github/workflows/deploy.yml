@@ -18,7 +18,7 @@ jobs:
           node-version: '14.x'
 
       - name: "env"
-        run: echo ${{ secrets.QQ_PASS }} >> pass.txt
+        run: echo `${{ secrets.QQ_PASS }}` >> pass.txt
 
       - name: Install
         run: npm install # 安装依赖
