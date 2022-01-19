@@ -4,7 +4,7 @@
   "description": "采集博客",
   "main": "main.js",
   "scripts": {
-    "build": "node main.js"
+    "build": "ts-node ./src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/tcly861204/node-collection-blog#readme",
   "dependencies": {
+    "@types/node": "^17.0.10",
+    "@types/request": "^2.48.8",
     "cheerio": "^1.0.0-rc.10",
     "nodemailer": "^6.7.2",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "ts-node": "^10.4.0"
   }
 }

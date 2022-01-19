@@ -21,4 +21,6 @@ jobs:
         run: npm install # 安装依赖
       
       - name: Build
+        env:
+          pass: ${{ secrets.QQ_PASS }}
         run: npm run build
