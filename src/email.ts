@@ -11,7 +11,7 @@ let transporter = nodemailer.createTransport({
 const sendMail = function(options: string) {
   let mailOptions = {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
-    to: 'tcly861204@hotmail.com', // 收邮件的账号
+    to: '356671808@qq.com', // 收邮件的账号
     subject: '每日前端必看', // 标题
     html: `
 <style>
