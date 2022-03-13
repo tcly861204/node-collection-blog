@@ -14,21 +14,34 @@ const sendMail = function(options: string) {
     to: '356671808@qq.com', // 收邮件的账号
     subject: '每日前端必看', // 标题
     html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta content="yes" name="apple-mobile-web-app-capable">  
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">  
+  <meta content="telephone=no" name="format-detection">
+</head>
 <style>
   * {
     margin: 0;
     padding: 0;
+    border: none;
   }
   a {
-    text-decoration: none;
-    color: #424242;
-    font-size: 13px;
+    text-decoration: none !important;
+    font-size: 16px; 
+    color: #999;
   }
 </style>
-<section style="width: 750px; margin: 0 auto; border: 2px solid #ccc; border-radius: 6px;">
-  <h2 style="font-size: 18px; text-align: center;">每日必看</h2>
-  <ul style="list-style-type: none;">\n${options}\n</ul>
-</section>
+<body>
+  <section style="margin: 0; padding: 0;">
+    <h2 style="font-size: 20px; text-align: center; margin: 0;">每日必看</h2>
+    <ul style="list-style-type: none; margin: 0; padding: 0;">\n${options}\n</ul>
+  </section>
+</body>
+</html>
   ` // 邮寄的内容
   }
   transporter.sendMail(mailOptions, (err: any, info: any) => {

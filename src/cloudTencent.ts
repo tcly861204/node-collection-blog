@@ -12,10 +12,21 @@ const cloudTencent = function () {
         })
         const group = $('body').find('.com-article-list').find('.com-article-panel')
         const data: Array<string> = []
-        group.each(function(i) {
+        group.each(function(index) {
           let title = $(this).find('.com-article-panel-title').html()
           title = title!.replace(/(?<=(href="))/, 'https://cloud.tencent.com')
-          data.push(`\t<li style="list-style-type: none;">${title}</li>`)
+            .replace('hotrep=""', `
+              style="
+                color: #999;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 16px;
+              "
+            `)
+          data.push(`\t<li style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
+            <span style="color: #999; font-size: 16px;">${index+1}. </span>
+            ${title}
+          </li>`)
         })
         reslove(data)
       }

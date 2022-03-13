@@ -16,8 +16,17 @@ const cnode = function () {
           if (i > 4 && i < 20) {
             let title = $(this).find('.topic_title_wrapper').html()
             title = title!.replace(/(\<span.*\<\/span\>)/g, '').trim()
-            title = title.replace(/(?<=(href="))/, 'https://cnodejs.org')
-            data.push(`\t<li style="list-style-type: none;">${title}</li>`)
+            title = title.replace(/(?<=(href="))/, 'https://cnodejs.org').replace('class="topic_title"', `
+              style="
+                color: #999;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 16px;"
+            `)
+            data.push(`\t<li style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
+              <span style="color: #999; font-size: 16px;">${i+1}. </span>
+              ${title}
+            </li>`)
           }
         })
         reslove(data)

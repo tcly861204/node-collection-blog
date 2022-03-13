@@ -7,10 +7,17 @@ import cnode from './cnode'
 (async() => {
   const cloudTencentData = await cloudTencent()
   const cnodeData = await cnode()
+  const Style = `
+    font-size: 20px; background: #ff0000; color: #fff; padding: 2px 6px; border-radius: 3px; margin: 0;
+  `
   const data = [
-    '<li><h2>腾讯云</h2></li>',
+    `<li style="list-style-type: none; margin: 0 0 20px 0;">
+      <span style="${Style}">腾讯云</span>
+    </li>`,
     ...(cloudTencentData as Array<string>),
-    '<li><h2>cnode</h2></li>',
+    `<li style="list-style-type: none; margin: 0 0 20px 0;">
+      <span style="${Style}">cnode</span>
+    </li>`,
     ...(cnodeData as Array<string>)
   ]
   try {
