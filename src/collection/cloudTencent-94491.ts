@@ -1,6 +1,6 @@
 import request, { RequestCallback } from 'request'
 import cheerio from 'cheerio'
-const uri = 'https://cloud.tencent.com/developer/column/91112'
+const uri = 'https://cloud.tencent.com/developer/column/94491'
 const cloudTencent = function () {
   return new Promise((reslove, reject) => {
     const callback: RequestCallback = function (error, response, body) {
@@ -28,7 +28,10 @@ const cloudTencent = function () {
             ${title}
           </li>`)
         })
-        reslove(data)
+        reslove({
+          name: '南山种子外卖跑手的专栏',
+          data
+        })
       }
     }
     return request.get(uri, callback)

@@ -29,7 +29,10 @@ const cnode = function () {
             </li>`)
           }
         })
-        reslove(data)
+        reslove({
+          name: 'cnode',
+          data
+        })
       }
     }
     return request.get(uri, callback)
