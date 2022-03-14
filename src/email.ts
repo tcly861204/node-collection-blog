@@ -37,7 +37,6 @@ const sendMail = function(options: string) {
 </style>
 <body>
   <section style="margin: 0; padding: 0;">
-    <h2 style="font-size: 20px; text-align: center; margin: 0;">每日必看</h2>
     <ul style="list-style-type: none; margin: 0; padding: 0;">\n${options}\n</ul>
   </section>
 </body>
