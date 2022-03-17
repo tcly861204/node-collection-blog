@@ -23,4 +23,4 @@ jobs:
       - name: Build
         env:
           pass: ${{secrets.QQ_PASS}}
-        run: npm run build
+        run: npm run build -model $pass
