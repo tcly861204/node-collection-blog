@@ -14,21 +14,19 @@ const segmentfault = function () {
         const data: Array<string> = []
         group.each(function(i) {
           if (i > 0 && i < 20) {
-            let title = $(this).find('.content').html()
-            console.log(title)
-            // title = title!.replace(/(\<div.*\<\/div\>)/g, '').trim()
-            
-//             title = title.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
-//               style="
-//                 color: #999;
-//                 font-weight: normal;
-//                 text-decoration: none;
-//                 font-size: 16px;"
-//             `)
-//             data.push(`\t<li style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
-//               <span style="color: #999; font-size: 16px;">${i+1}. </span>
-//               ${title}
-//             </li>`)
+            let title = $(this).find('.content').html().replace(/\<div(.*)\/div\>/, '')
+               title = title!.replace(/\<(\/)?h5\>/g, '')
+               title = title.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
+               style="
+                  color: #999;
+                  font-weight: normal;
+                  text-decoration: none;
+                  font-size: 16px;"
+               `)
+               data.push(`\t<li style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
+                <span style="color: #999; font-size: 16px;">${i+1}. </span>
+                ${title}
+               </li>`)
           }
         })
         reslove({
