@@ -4,7 +4,6 @@ let transporter = nodemailer.createTransport({
   service: 'QQ', // 发给QQ邮箱
   auth: { // 权限认证
     user: '356671808@qq.com',
-//     pass: 'waiyzqzpizodcabh'
     pass: process.env.QQ_PASS
   }
 })
@@ -46,7 +45,6 @@ const sendMail = function(options: string) {
   }
   transporter.sendMail(mailOptions, (err: any, info: any) => {
     if (!err) {
-      console.log(process.env.QQ_PASS)
       console.log('邮件已经发生完成')
     }
   })
