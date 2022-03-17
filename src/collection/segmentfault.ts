@@ -16,10 +16,8 @@ const segmentfault = function () {
           if (i > 0 && i < 20) {
             let title = $(this).find('.content').html()
                title = title!.replace(/\<div(.*)\/div\>/, '')
-               console.log(title)
                title = title!.replace(/\<(\/)?h5\>/g, '')
-               console.log(title)
-               title = title!.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
+               title = title!.replace(/(?<=(href="))/, 'https://segmentfault.com').replace('class="title text-body"', `
                style="
                   color: #999;
                   font-weight: normal;
