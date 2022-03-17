@@ -14,9 +14,12 @@ const segmentfault = function () {
         const data: Array<string> = []
         group.each(function(i) {
           if (i > 0 && i < 20) {
-            let title = $(this).find('.content').html().replace(/\<div(.*)\/div\>/, '')
+            let title = $(this).find('.content').html()
+               title = title!.replace(/\<div(.*)\/div\>/, '')
+               console.log(title)
                title = title!.replace(/\<(\/)?h5\>/g, '')
-               title = title.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
+               console.log(title)
+               title = title!.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
                style="
                   color: #999;
                   font-weight: normal;
