@@ -19,8 +19,11 @@ jobs:
 
       - name: Install
         run: npm install # 安装依赖
-      
+        
+      - name: Env
+        uses: ./
+        with:
+          QQ_PASS: ${{secrets.QQ_PASS}}
+
       - name: Build
-        env:
-          pass: ${{secrets.QQ_PASS}}
         run: npm run build -model $pass
