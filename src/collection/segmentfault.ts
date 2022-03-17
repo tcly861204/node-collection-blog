@@ -14,7 +14,7 @@ const segmentfault = function () {
         const data: Array<string> = []
         group.each(function(i) {
           if (i > 0 && i < 20) {
-            let title = $(this).find('h5').html()
+            let title = $(this).find('.content').find('h5').html()
             // title = title!.replace(/(\<h5.*\<\/h5\>)/g, '').trim()
             title = title.replace(/(?<=(href="))/, 'https://segmentfault.com/').replace('class="title text-body"', `
               style="
