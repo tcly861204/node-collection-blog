@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer'
 
+console.log(process.env)
+
 let transporter = nodemailer.createTransport({
   service: 'QQ', // 发给QQ邮箱
   auth: { // 权限认证
