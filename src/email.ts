@@ -1,7 +1,5 @@
 import nodemailer from 'nodemailer'
 
-console.log(process.env)
-
 let transporter = nodemailer.createTransport({
   service: 'QQ', // 发给QQ邮箱
   auth: { // 权限认证
@@ -47,6 +45,7 @@ const sendMail = function(options: string) {
   }
   transporter.sendMail(mailOptions, (err: any, info: any) => {
     if (!err) {
+      console.log(process.env)
       console.log('邮件已经发生完成')
     }
   })
