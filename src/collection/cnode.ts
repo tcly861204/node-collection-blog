@@ -23,10 +23,10 @@ const cnode = function () {
                 text-decoration: none;
                 font-size: 16px;"
             `)
-            data.push(`\t<li style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
+            data.push(`\t<dl style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
               <span style="color: #999; font-size: 16px;">${i - 4}. </span>
               ${title}
-            </li>`)
+            </dl>`)
           }
         })
         reslove({

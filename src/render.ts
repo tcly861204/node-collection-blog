@@ -18,7 +18,7 @@ const render = function (option: string):string{
     }
   </style>
 </head>
-<body>
+<body style="background: #f1f1f1;">
 ${option}
 </body>
 </html>

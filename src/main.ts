@@ -12,10 +12,14 @@ import sendMail from "./email"
   await Promise.all(files.map(item => require(path.resolve(root, item)).default())).then(result => {
     result.forEach(item => {
       data.push(`
-        <li style="list-style-type: none; margin: 0 0 12px 0;">
-          <span style="${Style}">${item.name}</span>
-        </li>
-        ${(item.data as Array<string>).join('')}
+      <section style="padding: 15px;">
+        <dl style="background: #fff;">
+          <dt style="list-style-type: none; margin: 0 0 12px 0;">
+            <span style="${Style}">${item.name}</span>
+          </dt>
+          ${(item.data as Array<string>).join('')}
+        </dl>
+      </section>
       `)
     })
   })

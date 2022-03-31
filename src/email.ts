@@ -1,8 +1,10 @@
 import nodemailer from 'nodemailer'
 
-let transporter = nodemailer.createTransport({
-  service: 'QQ', // 发给QQ邮箱
-  auth: { // 权限认证
+const transporter = nodemailer.createTransport({
+  // 发给QQ邮箱
+  service: 'QQ',
+  // 权限认证
+  auth: {
     user: '356671808@qq.com',
     pass: process.env.QQ_PASS
   }
@@ -12,7 +14,7 @@ const sendMail = function(options: string) {
   let mailOptions = {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
     to: '356671808@qq.com', // 收邮件的账号
-    subject: '每日前端必看<tcly861204@hotmail.com>', // 标题
+    subject: '前端每日必看', // 标题
     html: `
 <!DOCTYPE html>
 <html lang="en">
