@@ -8,7 +8,7 @@ import sendMail from "./email"
   const data: String[] = []
   const Style = `
     font-size: 16px;
-    color: #424242;
+    color: #5fa207;
     padding: 2px 6px;
     border-radius: 3px;
     margin: 0;
@@ -16,9 +16,9 @@ import sendMail from "./email"
   await Promise.all(files.map(item => require(path.resolve(root, item)).default())).then(result => {
     result.forEach(item => {
       data.push(`
-      <section>
+      <section style="margin-bottom: 10px">
         <dl style="background: #fff;">
-          <dt style="list-style-type: none; margin: 0 0 12px 0;">
+          <dt style="list-style-type: none; margin: 0 0 16px 0;">
             <span style="${Style}">${item.name}</span>
           </dt>
           ${(item.data as Array<string>).join('')}
