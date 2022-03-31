@@ -7,12 +7,16 @@ import sendMail from "./email"
   const files = fs.readdirSync(root)
   const data: String[] = []
   const Style = `
-    font-size: 20px; background: #ff0000; color: #fff; padding: 2px 6px; border-radius: 3px; margin: 0;
+    font-size: 16px;
+    color: #424242;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin: 0;
   `
   await Promise.all(files.map(item => require(path.resolve(root, item)).default())).then(result => {
     result.forEach(item => {
       data.push(`
-      <section style="padding: 15px;">
+      <section style="padding: 15px; background: #f1f1f1;">
         <dl style="background: #fff;">
           <dt style="list-style-type: none; margin: 0 0 12px 0;">
             <span style="${Style}">${item.name}</span>

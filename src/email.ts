@@ -36,7 +36,7 @@ const sendMail = function(options: string) {
     color: #999;
   }
 </style>
-<body style="background: #f1f1f1;">
+<body>
   ${options}
 </body>
 </html>
