@@ -9,10 +9,15 @@ const transporter = nodemailer.createTransport({
   }
 })
 
+const ACCOUNTS = [
+  '356671808@qq.com',
+  'tcly861204@hotmail.com'
+]
+
 const sendMail = function(options: string) {
   let mailOptions = {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
-    to: '356671808@qq.com', // 收邮件的账号
+    to: ACCOUNTS.join(', '), // 收邮件的账号
     subject: '前端每日必看', // 标题
     html: `
 <!DOCTYPE html>
