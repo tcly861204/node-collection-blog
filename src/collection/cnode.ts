@@ -21,7 +21,7 @@ const cnode = function () {
                 color: #999;
                 font-weight: normal;
                 text-decoration: none;
-                font-size: 16px;"
+                font-size: 12px;"
             `)
             data.push(`\t<dl style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
               <span style="color: #999; font-size: 12px;">${i - 4}. </span>
