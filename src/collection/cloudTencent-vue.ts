@@ -24,7 +24,7 @@ const cloudTencent = function () {
               "
             `)
           data.push(`\t<dl style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
-            <span style="color: #999; font-size: 16px;">${index+1}. </span>
+            <span style="color: #999; font-size: 12px;">${index+1}. </span>
             ${title}
           </dl>`)
         })

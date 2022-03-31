@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer'
-
 const transporter = nodemailer.createTransport({
   // 发给QQ邮箱
   service: 'QQ',
@@ -37,10 +36,8 @@ const sendMail = function(options: string) {
     color: #999;
   }
 </style>
-<body>
-  <section style="margin: 0; padding: 0;">
-    <ul style="list-style-type: none; margin: 0; padding: 0;">\n${options}\n</ul>
-  </section>
+<body style="background: #f1f1f1;">
+  ${options}
 </body>
 </html>
   ` // 邮寄的内容
