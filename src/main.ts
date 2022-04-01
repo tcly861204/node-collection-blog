@@ -30,11 +30,20 @@ import sendMail from "./email"
   try {
     const html = render(data.join('\n'))
     sendMail(data.join('\n'))
-    fs.writeFileSync(
-      path.resolve(__dirname, '../dist/index.html'),
-      html,
-      'utf8'
-    )
+    // 写入html文件
+    fs.mkdirSync(path.resolve(__dirname, '../dist'))
+    const indexHtmlPath = path.resolve(__dirname, '../dist/index.html')
+    fs.access(indexHtmlPath, (err) => {
+      if (err) {
+        fs.appendFileSync(indexHtmlPath, html)
+      } else {
+        fs.writeFileSync(
+          indexHtmlPath,
+          html,
+          'utf8'
+        )
+      }
+    })
   } catch (error) {
     console.log(error)
   }

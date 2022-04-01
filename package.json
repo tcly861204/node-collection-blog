@@ -9,7 +9,8 @@
     "request"
   ],
   "scripts": {
-    "build": "ts-node ./src/main.ts"
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && ts-node ./src/main.ts"
   },
   "repository": {
     "type": "git",
