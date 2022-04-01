@@ -19,6 +19,7 @@ const render = function (option: string):string{
   </style>
 </head>
 <body style="background: #f1f1f1;">
+<h2>前端每日必看</h2>
 ${option}
 </body>
 </html>
