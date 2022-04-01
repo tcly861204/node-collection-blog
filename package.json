@@ -9,8 +9,7 @@
     "request"
   ],
   "scripts": {
-    "clean": "rimraf ./dist",
-    "build": "npm run clean && ts-node ./src/main.ts"
+    "build": "ts-node ./src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -32,7 +31,6 @@
     "typescript": "^4.5.4"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.4",
-    "rimraf": "^3.0.2"
+    "@types/nodemailer": "^6.4.4"
   }
 }
