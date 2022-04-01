@@ -9,6 +9,16 @@ const render = function (option: string):string{
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>前端每日必看</title>
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      padding: 15px;
+    }
+    h2 {
+      padding-bottom: 20px;
+    }
     a {
       text-decoration: none;
       color: #424242;
@@ -17,10 +27,14 @@ const render = function (option: string):string{
     ul, li {
       list-style-type: none;
     }
+    section {
+      margin-bottom: 15px !important;
+    }
     section dl {
       padding: 12px 15px;
       border-radius: 6px;
       box-shadow: 0 3px 8px 0 rgb(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease-in-out 0.1s;
     }
     section dl:hover {
       box-shadow: 0 5px 8px 0 rgb(0, 0, 0, 0.1);
