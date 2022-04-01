@@ -28,7 +28,7 @@ const render = function (option: string):string{
       list-style-type: none;
     }
     section {
-      margin-bottom: 15px !important;
+      margin-bottom: 20px !important;
     }
     section dl {
       padding: 12px 15px;
