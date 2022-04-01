@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "ts-node ./src/main.ts",
-    "postbuild": "cp favicon.ico ./dist"
+    "postbuild": "cp -R public ./dist"
   },
   "repository": {
     "type": "git",
