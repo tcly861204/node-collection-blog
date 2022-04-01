@@ -16,6 +16,10 @@ const render = function (option: string):string{
     ul, li {
       list-style-type: none;
     }
+    section dl {
+      padding: 12px 15px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body style="background: #f1f1f1;">
