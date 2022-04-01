@@ -23,10 +23,10 @@ const cloudTencent = function () {
                 font-size: 13px;
               "
             `)
-          data.push(`\t<dl style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
+          data.push(`\t<dd style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
             <span style="color: #999; font-size: 13px;">${index+1}. </span>
             ${title}
-          </dl>`)
+          </dd>`)
         })
         reslove({
           name: '腾讯云',
