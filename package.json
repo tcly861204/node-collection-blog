@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "采集博客",
   "main": "main.js",
-  "keywords": ["nodemailer", "cheerio", "request"],
+  "keywords": [
+    "nodemailer",
+    "cheerio",
+    "request"
+  ],
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "rimraf ./dist",
     "build": "npm run clean && ts-node ./src/main.ts"
   },
   "repository": {
@@ -28,6 +32,7 @@
     "typescript": "^4.5.4"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.4"
+    "@types/nodemailer": "^6.4.4",
+    "rimraf": "^3.0.2"
   }
 }
