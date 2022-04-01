@@ -9,8 +9,7 @@
     "request"
   ],
   "scripts": {
-    "clean": "rm -rf ./dist",
-    "build": "npm run clean && ts-node ./src/main.ts",
+    "build": "ts-node ./src/main.ts",
     "postbuild": "cp favicon.ico ./dist"
   },
   "repository": {
