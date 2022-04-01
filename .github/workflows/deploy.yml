@@ -42,3 +42,14 @@ jobs:
         env:
           QQ_PASS: ${{secrets.QQ_PASS}}
         run: npm run build
+      
+      - name: Copy
+        run: cp README.md dist
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3 # 使用部署到 GitHub pages 的 action
+        with:
+          # 发布到指定分支
+          BRANCH: gh-pages
+          # 构建成果所在目录,默认位置都是在根目录
+          FOLDER: ./dist
