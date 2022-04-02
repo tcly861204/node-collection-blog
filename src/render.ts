@@ -7,7 +7,7 @@ const render = function (option: string):string{
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>前端每日必看</title>
-  <link rel="icon" href="./public/favicon.ico" />
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" />
   <link rel="stylesheet" href="./public/style.css" />
   <script src="https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
   <script src="./public/main.js"></script>
