@@ -3,6 +3,7 @@ window.onload = function () {
   let screenHeight = window.innerHeight
   let screenWidth = window.innerWidth
   let bodyHeight = document.body.offsetHeight - screenHeight
+  let timer = null
   const handleScroll = function (e) {
     // @ts-ignore
     progress.style.width = Math.floor((e.currentTarget.scrollY / bodyHeight) * screenWidth) + 'px'
@@ -23,5 +24,6 @@ window.onload = function () {
     dateNode.innerHTML = dayjs().format('YYYY-MM-DD HH:mm:ss')
   }
   renderDate()
-  setInterval(renderDate, 1000)
+  if (timer) clearInterval(timer)
+  timer = setInterval(renderDate, 1000)
 }
