@@ -5,7 +5,7 @@
 
 body {
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 0;
   background: #f5f7fa;
 }
 
@@ -42,7 +42,7 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 h1.title {
