@@ -71,17 +71,11 @@ header #date {
 }
 
 @media (max-width: 991px) {
-  .github-corner>svg {
-      fill:#fff;
-      color: #222
-  }
-
   .github-corner .github-corner:hover .octo-arm {
-      animation: none
+    animation: none
   }
-
   .github-corner .github-corner .octo-arm {
-      animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out
   }
 }
 
