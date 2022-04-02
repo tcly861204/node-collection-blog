@@ -9,12 +9,16 @@ const render = function (option: string):string{
   <title>前端每日必看</title>
   <link rel="icon" href="./public/favicon.ico" />
   <link rel="stylesheet" href="./public/style.css" />
+  <script src="https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
   <script src="./public/main.js"></script>
 </head>
 <body>
-<div class="progress"></div>
-<h2>前端每日必看</h2>
-${option}
+  <div class="progress"></div>
+  <header>
+    <h1 class="title">前端每日必看</h1>
+    <span id="date"></span>
+  </header>
+  ${option}
 </body>
 </html>
   `

@@ -9,6 +9,7 @@
     "request"
   ],
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "ts-node ./src/main.ts",
     "postbuild": "cp -R public ./dist"
   },

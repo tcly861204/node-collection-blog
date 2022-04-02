@@ -16,7 +16,7 @@ import sendMail from "./email"
   await Promise.all(files.map(item => require(path.resolve(root, item)).default())).then(result => {
     result.forEach(item => {
       data.push(`
-      <section style="margin-bottom: 10px">
+      <section class="groups" style="margin-bottom: 10px">
         <dl style="background: #fff;">
           <dt style="list-style-type: none; margin: 0 0 16px 0;">
             <span style="${Style}">${item.name}</span>
