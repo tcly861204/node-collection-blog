@@ -16,4 +16,12 @@ window.onload = function () {
   window.addEventListener('scroll', function (e) {
     handleScroll(e)
   }, false)
+  
+  const dateNode = document.body.querySelector('#date')
+  const renderDate = function () {
+    // @ts-ignore
+    dateNode.innerHTML = dayjs().format('YYYY-MM-DD HH:mm:ss')
+  }
+  renderDate()
+  setInterval(renderDate, 1000)
 }
