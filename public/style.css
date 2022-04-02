@@ -4,6 +4,7 @@
 }
 
 body {
+  position: relative;
   padding: 15px;
   background: #f1f1f1;
 }
@@ -39,19 +40,106 @@ body::-webkit-scrollbar-thumb:hover {
 
 header {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 h1.title {
-  padding-bottom: 20px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: normal;
+  letter-spacing: 1.5px;
 }
 
 header #date {
-  height: 18px;
-  padding: 17px 0 0 10px;
   font-size: 13px;
   color: #5fa207;
+}
+
+
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+.github-corner>svg {
+  fill: #222;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0
+}
+
+@media (max-width: 991px) {
+  .github-corner>svg {
+      fill:#fff;
+      color: #222
+  }
+
+  .github-corner .github-corner:hover .octo-arm {
+      animation: none
+  }
+
+  .github-corner .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out
+  }
+}
+
+
+@-moz-keyframes octocat-wave {
+  0%,100% {
+      transform: rotate(0)
+  }
+
+  20%,60% {
+      transform: rotate(-25deg)
+  }
+
+  40%,80% {
+      transform: rotate(10deg)
+  }
+}
+
+@-webkit-keyframes octocat-wave {
+  0%,100% {
+      transform: rotate(0)
+  }
+
+  20%,60% {
+      transform: rotate(-25deg)
+  }
+
+  40%,80% {
+      transform: rotate(10deg)
+  }
+}
+
+@-o-keyframes octocat-wave {
+  0%,100% {
+      transform: rotate(0)
+  }
+
+  20%,60% {
+      transform: rotate(-25deg)
+  }
+
+  40%,80% {
+      transform: rotate(10deg)
+  }
+}
+
+@keyframes octocat-wave {
+  0%,100% {
+      transform: rotate(0)
+  }
+
+  20%,60% {
+      transform: rotate(-25deg)
+  }
+
+  40%,80% {
+      transform: rotate(10deg)
+  }
 }
 
 a {
