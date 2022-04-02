@@ -6,7 +6,7 @@
 body {
   position: relative;
   padding: 15px;
-  background: #f1f1f1;
+  background: #f5f7fa;
 }
 
 .progress {
@@ -152,12 +152,12 @@ ul, li {
 .groups dl {
   padding: 12px 15px;
   border-radius: 6px;
-  box-shadow: 0 3px 8px 0 rgb(0, 0, 0, 0.05);
+  box-shadow: 8px 8px 20px 0 rgb(55 99 170 / 10%), -8px -8px 20px 0 #fff;
   transition: box-shadow 0.3s ease-in-out 0.1s;
 }
 
 .groups dl:hover {
-  box-shadow: 0 5px 8px 0 rgb(0, 0, 0, 0.1);
+  box-shadow:8px 8px 20px 0 rgba(55,99,170,.2),-8px -8px 20px 0 #fff
 }
 
 .groups dl dd {
