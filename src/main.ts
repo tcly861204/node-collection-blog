@@ -1,19 +1,14 @@
 import fs from 'fs'
 import path from 'path'
-import render from "./render"
+import render, { Style } from "./render"
 import sendMail from "./email"
 (async() => {
   const root = path.resolve(__dirname, 'collection')
   const files = fs.readdirSync(root)
   const data: String[] = []
-  const Style = `
-    font-size: 16px;
-    color: #5fa207;
-    padding: 2px 6px;
-    border-radius: 3px;
-    margin: 0;
-  `
-  await Promise.all(files.map(item => require(path.resolve(root, item)).default())).then(result => {
+  await Promise.all(
+    files.map(item => require(path.resolve(root, item)).default())
+  ).then(result => {
     result.forEach(item => {
       data.push(`
       <section class="groups" style="margin-bottom: 10px">

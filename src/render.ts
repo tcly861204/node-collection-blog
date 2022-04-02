@@ -30,4 +30,13 @@ const render = function (option: string):string{
 </html>
   `
 }
+
 export default render
+
+export const Style = `
+font-size: 16px;
+color: #5fa207;
+padding: 2px 6px;
+border-radius: 3px;
+margin: 0;
+`

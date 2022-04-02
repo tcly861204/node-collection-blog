@@ -1,4 +1,9 @@
 import nodemailer from 'nodemailer'
+
+const ACCOUNTS = [
+  '356671808@qq.com'
+]
+
 const transporter = nodemailer.createTransport({
   // 发给QQ邮箱
   service: 'QQ',
@@ -10,11 +15,6 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-const ACCOUNTS = [
-  '356671808@qq.com',
-  'tcly861204@hotmail.com'
-]
-
 const sendMail = function(options: string) {
   let mailOptions = {
     from: `"cobill"<356671808@qq.com>`, // 发邮件的账号
@@ -24,8 +24,9 @@ const sendMail = function(options: string) {
   }
   transporter.sendMail(mailOptions, (err: any, info: any) => {
     if (!err) {
-      console.log('邮件已经发送完成')
+      console.log('🎉🎉🎉邮件已经发送完成')
     }
   })
 }
+
 export default sendMail
