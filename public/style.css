@@ -9,6 +9,17 @@ body {
   background: #f5f7fa;
 }
 
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background: #000;
+  height: 4px;
+}
+
 .progress {
   position: fixed;
   top: 0;
