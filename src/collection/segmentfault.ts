@@ -17,6 +17,7 @@ const segmentfault = function () {
             let title = $(this).find('.content').html()
                title = title!.replace(/\<div(.*)\/div\>/, '')
                title = title!.replace(/\<(\/)?(h3|h5)\>/g, '')
+               console.log(title)
                title = title!.replace(/(?<=(href="))/, 'https://segmentfault.com').replace(/(?<=(class=))([\"\w+\s+\-]+)/, '').replace('class=', `
                style="
                   color: #999;
