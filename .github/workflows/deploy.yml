@@ -44,7 +44,7 @@ jobs:
         run: npm run build
       
       - name: Copy
-        run: cp README.md dist
+        run: cp README.md dist && cd dist && ls && cd ..
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3 # 使用部署到 GitHub pages 的 action
