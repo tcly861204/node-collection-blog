@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import render, { Style } from "./render"
-import sendMail from "./email"
+// import sendMail from "./email"
 (async() => {
   const root = path.resolve(__dirname, 'collection')
   const files = fs.readdirSync(root)
@@ -23,7 +23,7 @@ import sendMail from "./email"
     })
   })
   try {
-    sendMail(data.join('\n'))
+    // sendMail(data.join('\n'))
     // 写入html文件
     const html = render(data.join('\n'))
     fs.mkdirSync(path.resolve(__dirname, '../dist'))

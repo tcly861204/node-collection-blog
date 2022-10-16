@@ -1,5 +1,5 @@
 import request, { RequestCallback } from 'request'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 const uri = 'https://cnodejs.org'
 const cnode = function () {
   return new Promise((reslove, reject) => {

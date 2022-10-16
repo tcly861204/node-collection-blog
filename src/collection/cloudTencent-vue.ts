@@ -1,5 +1,5 @@
 import request, { RequestCallback } from 'request'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 const uri = 'https://cloud.tencent.com/developer/column/91112'
 const cloudTencent = function () {
   return new Promise((reslove, reject) => {
