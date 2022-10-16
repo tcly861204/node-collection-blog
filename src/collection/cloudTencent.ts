@@ -11,6 +11,7 @@ const cloudTencent = function () {
           decodeEntities: false
         })
         const group = $('body').find('.com-article-list').find('.com-article-panel')
+        console.log(group)
         const data: Array<string> = []
         group.each(function(index) {
           let title = $(this).find('.com-article-panel-title').html()
