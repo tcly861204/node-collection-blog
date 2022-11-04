@@ -1,7 +1,8 @@
 import nodemailer from 'nodemailer'
 
 const ACCOUNTS = [
-  '356671808@qq.com'
+  '356671808@qq.com',
+  '961295774@qq.com'
 ]
 
 const transporter = nodemailer.createTransport({
