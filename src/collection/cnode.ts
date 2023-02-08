@@ -22,6 +22,7 @@ const cnode = function () {
                 font-weight: normal;
                 text-decoration: none;
                 font-size: 13px;"
+              target="_blank"
             `)
             data.push(`\t<dd style="list-style-type: none; margin: 0 0 15px 0; padding: 0;">
               <span style="color: #999; font-size: 13px;">${i - 4}. </span>
