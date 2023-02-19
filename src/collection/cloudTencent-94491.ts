@@ -10,7 +10,7 @@ const cloudTencent = function () {
         const $ = cheerio.load(body, {
           decodeEntities: false
         })
-        const group = $('body').find('.com-article-list').find('.com-article-panel')
+        const group = $('body').find('.cdc-article-panel__list').find('.cdc-article-panel')
         const data: Array<string> = []
         group.each(function(index) {
           let title = $(this).find('.com-article-panel-title').html()
