@@ -10,8 +10,6 @@ import sendMail from "./email"
     files.map(item => require(path.resolve(root, item)).default())
   ).then(result => {
     result.forEach(item => {
-      console.log(item.name)
-      console.log(item.data)
       data.push(`
       <section class="groups" style="margin-bottom: 10px">
         <dl style="background: #fff;">

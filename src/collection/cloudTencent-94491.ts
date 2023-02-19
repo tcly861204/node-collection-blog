@@ -13,16 +13,17 @@ const cloudTencent = function () {
         const group = $('body').find('.cdc-article-panel__list').find('.cdc-article-panel')
         const data: Array<string> = []
         group.each(function(index) {
-          let title = $(this).find('.com-article-panel-title').html()
-          title = title!.replace(/(?<=(href="))/, 'https://cloud.tencent.com')
-            .replace('hotrep=""', `
-              style="
-                color: #999;
-                font-weight: normal;
-                text-decoration: none;
-                font-size: 13px;
-              "
-            `)
+          let title = $(this).find('.cdc-article-panel__title').html()
+          const url = $(this).find('.cdc-article-panel__link').attr('href')
+          title = `<a style="
+            color: #999;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 13px;"
+            href="https://cloud.tencent.com${url}" target="_blank">
+            ${title}
+          </a>
+          `
           data.push(`\t<dd style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
             <span style="color: #999; font-size: 13px;">${index+1}. </span>
             ${title}
