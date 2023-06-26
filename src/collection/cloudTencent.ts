@@ -14,7 +14,7 @@ const cloudTencent = function () {
         const data: Array<string> = []
         group.each(function(index) {
           let title = $(this).find('.cdc-article-panel__title').html()
-          const url = $(this).find('.cdc-article-panel__link').attr('href')
+          const url = $(this).find('.cdc-article-panel__title').attr('href')
           title = `<a style="
             color: #999;
             font-weight: normal;
