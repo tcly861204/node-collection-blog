@@ -9,7 +9,3 @@
 
 ## 配置qq SMTP服务器地址填写
 就可以写邮件了
-
-## 参考文档
-+ https://segmentfault.com/a/1190000012251328
-+ https://www.hadsky.com/read-4683-1.html
