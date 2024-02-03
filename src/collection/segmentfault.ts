@@ -26,7 +26,7 @@ const segmentfault = function () {
             </a>
             `
             data.push(`\t<dd style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
-              <span style="color: #999; font-size: 13px;">${i+1}. </span>
+              <span style="color: #999; font-size: 13px;">${i}. </span>
               ${title}
             </dd>`)
           }
