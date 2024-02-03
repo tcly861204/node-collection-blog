@@ -14,20 +14,21 @@ const segmentfault = function () {
         const data: Array<string> = []
         group.each(function(i) {
           if (i > 0 && i < 20) {
-            let title = $(this).find('.content').html()
-               title = title!.replace(/\<div(.*)\/div\>/, '')
-               title = title!.replace(/\<(\/)?(h3|h5)([\s\w\=\"]*)?\>/g, '')
-               title = title!.replace(/(?<=(href="))/, 'https://segmentfault.com').replace(/(?<=(class="))([\w+\s+\-]+)/, '').replace('class=""', `
-               style="
-                  color: #999;
-                  font-weight: normal;
-                  text-decoration: none;
-                  font-size: 13px;"
-               `)
-               data.push(`\t<dd style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
-                <span style="color: #999; font-size: 13px;">${i}. </span>
-                ${title}
-               </dd>`)
+            let titleNode = $(this).find('.title')
+            const href = titleNode.attr('href')
+            const title = `<a style="
+              color: #999;
+              font-weight: normal;
+              text-decoration: none;
+              font-size: 13px;"
+              href="https://segmentfault.com${href}" target="_blank">
+              ${titleNode.html()}
+            </a>
+            `
+            data.push(`\t<dd style="list-style-type: none; margin: 0 0 10px 0; padding: 0;">
+              <span style="color: #999; font-size: 13px;">${i+1}. </span>
+              ${title}
+            </dd>`)
           }
         })
         reslove({

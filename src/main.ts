@@ -22,24 +22,24 @@ import sendMail from "./email"
       `)
     })
   })
-  try {
-    sendMail(data.join('\n'))
-    // 写入html文件
-    const html = render(data.join('\n'))
-    fs.mkdirSync(path.resolve(__dirname, '../dist'))
-    const indexHtmlPath = path.resolve(__dirname, '../dist/index.html')
-    fs.access(indexHtmlPath, (err) => {
-      if (err) {
-        fs.appendFileSync(indexHtmlPath, html)
-      } else {
-        fs.writeFileSync(
-          indexHtmlPath,
-          html,
-          'utf8'
-        )
-      }
-    })
-  } catch (error) {
-    console.log(error)
-  }
+  // try {
+  //   sendMail(data.join('\n'))
+  //   // 写入html文件
+  //   const html = render(data.join('\n'))
+  //   fs.mkdirSync(path.resolve(__dirname, '../dist'))
+  //   const indexHtmlPath = path.resolve(__dirname, '../dist/index.html')
+  //   fs.access(indexHtmlPath, (err) => {
+  //     if (err) {
+  //       fs.appendFileSync(indexHtmlPath, html)
+  //     } else {
+  //       fs.writeFileSync(
+  //         indexHtmlPath,
+  //         html,
+  //         'utf8'
+  //       )
+  //     }
+  //   })
+  // } catch (error) {
+  //   console.log(error)
+  // }
 })()
