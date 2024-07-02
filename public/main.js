@@ -1,3 +1,32 @@
+function toNum(num) {
+  return num < 10 ? '0' + num : num
+}
+
+Date.prototype.format = function (fmt = 'YYYY-MM-DD hh:mm:ss') {
+  const Y = this.getFullYear()
+  const M = this.getMonth() + 1
+  const D = this.getDate()
+  const h = this.getHours()
+  const m = this.getMinutes()
+  const s = this.getSeconds()
+  return fmt.replace(/([YMDhms]+)/g, ($1) => {
+    switch ($1) {
+      case 'YYYY':
+        return Y
+      case 'MM':
+        return toNum(M)
+      case 'DD':
+        return toNum(D)
+      case 'hh':
+        return toNum(h)
+      case 'mm':
+        return toNum(m)
+      case 'ss':
+        return toNum(s)
+    }
+  })
+}
+
 window.onload = function () {
   const progress = document.body.querySelector('.progress')
   let screenHeight = window.innerHeight
@@ -5,7 +34,6 @@ window.onload = function () {
   let bodyHeight = document.body.offsetHeight - screenHeight
   let timer = null
   const handleScroll = function (e) {
-    // @ts-ignore
     progress.style.width = Math.floor((e.currentTarget.scrollY / bodyHeight) * screenWidth) + 'px'
   }
   window.addEventListener('resize', function (e) {
@@ -20,8 +48,7 @@ window.onload = function () {
   
   const dateNode = document.body.querySelector('#date')
   const renderDate = function () {
-    // @ts-ignore
-    dateNode.innerHTML = dayjs().format('YYYY-MM-DD HH:mm:ss')
+    dateNode.innerHTML = new Date().format()
   }
   renderDate()
   if (timer) clearInterval(timer)
