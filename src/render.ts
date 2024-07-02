@@ -9,7 +9,6 @@ const render = function (option: string):string{
   <title>前端每日必看</title>
   <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" />
   <link rel="stylesheet" href="./public/style.css" />
-  <script src="https://cdn.bootcdn.net/ajax/libs/dayjs/1.11.0/dayjs.min.js"></script>
   <script src="./public/main.js"></script>
 </head>
 <body>
