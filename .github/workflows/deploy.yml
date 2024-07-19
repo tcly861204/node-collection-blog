@@ -13,16 +13,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
       
       - name: Version
         run: node -v
   
       - name: Cache nodemodules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
             cache-name: cache-node-modules
         with:
@@ -48,9 +51,9 @@ jobs:
         run: cp README.md dist && cd dist && ls && cd ..
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3 # 使用部署到 GitHub pages 的 action
+        uses: JamesIves/github-pages-deploy-action@v4 # 使用部署到 GitHub pages 的 action
         with:
           # 发布到指定分支
-          BRANCH: gh-pages
+          branch: gh-pages
           # 构建成果所在目录,默认位置都是在根目录
-          FOLDER: ./dist
+          folder: dist
